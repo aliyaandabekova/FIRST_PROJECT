@@ -100,10 +100,32 @@
 # print(distance)
 
 
-x,y = 10,20
+# tuple = () print("это кортеж")
+# import time
+# start_time = time.time()
+#
+# time.sleep(2)
+# string1 = "hello"
+#
+# print(time.time() - start_time)
 
-i = 1
-while x <= y:
-    x = x + (x * 0.1)
-    i += 1
-print(x,i)
+
+
+"""
+задача арбуз
+"""
+# w = int(input())
+# if 2 < w <= 100 and w % 2 == 0:
+#     print("YES")
+# else:
+#     print("NO")
+
+
+
+# x,y = 10,20
+#
+# i = 1
+# while x <= y:
+#     x = x + (x * 0.1)
+#     i += 1
+# print(x,i)
