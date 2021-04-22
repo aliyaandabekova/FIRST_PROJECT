@@ -44,7 +44,7 @@
 #     if i % 2 == 0:
 #         print(i)
 
-
+#
 # import random
 #
 # random_numbers = random.sample(range(1,30),20)
@@ -53,7 +53,7 @@
 #         print(random_numbers[i])
 
 import random
-
+#
 # random_numbers = [1,2,3,4]
 #
 # for i in random_numbers:
@@ -132,7 +132,7 @@ import random
 
 
 
-article = "Vasya nvirgiokfldll! Vasya jhgrufsjdk! Vasya jguiifjkld!"
+# article = "Vasya nvirgiokfldll! Vasya jhgrufsjdk! Vasya jguiifjkld!"
 # article = article.replace("Vasya","Petya")
 # print(article)
 
