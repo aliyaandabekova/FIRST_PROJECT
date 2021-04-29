@@ -37,30 +37,50 @@ def worker_of_month_increase_salary(data,worker_of_month):
                     user['salary'] = user['salary'] + (user['salary'] * 0.1)
     return data
 data = worker_of_month_increase_salary(data,worker_of_month)
-# print(data)
+print(data)
+
+
+
+
+data1 = data.copy()
+def list_without_gannibal(data1):
+    for user in data1:
+        if user['user'] == 'gannibal':
+            data.remove(user)
+    return data
+data = list_without_gannibal(data1=data1)
+print(data)
+
 
 
 
 def best_departments(data,worker_of_month):
-    for worker_keys,worker_value in worker_of_month.items():
-        for worker in worker_value:
+    for worker_key,worker_value in worker_of_month.items():
+        if len(worker_value) > 1:
             for user in data:
-                if len(worker_value) >= 2 and user['user'] == worker:
+                if worker_key == user['department']:
                     user['salary'] = user['salary'] + (user['salary'] * 0.05)
     return data
 data = best_departments(data,worker_of_month)
-# print(data)
+print(data)
+
+
 
 
 
 def worse_departments(data,worker_of_month):
-    for worker_keys,worker_value in worker_of_month.items():
-        for user in data:
-            if len(worker_value) == 0 or worker_of_month[worker_keys] == user['department']:
+    for user in data:
+        if user['department'] not in worker_of_month.keys():
+            user['salary'] = user['salary'] - (user['salary'] * 0.03)
+        for worker_key,worker_value in worker_of_month.items():
+            if user['department'] in worker_key and user['user'] not in worker_value and len(worker_value) == 0:
                 user['salary'] = user['salary'] - (user['salary'] * 0.03)
+
+
     return data
 data = worse_departments(data,worker_of_month)
 print(data)
+
 
 
 
@@ -74,4 +94,5 @@ def remove_worker(data=data):
             data.remove(user)
     return data
 data = remove_worker(data=data)
-# print(data)
+print(data)
+
