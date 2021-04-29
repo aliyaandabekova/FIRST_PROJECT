@@ -116,10 +116,10 @@ import random
 
 
 
-# article = "HELLo"
+article = "HELLo"
 
 # print(article.isdigit())
-# print(article.isalpha())
+print(article.isalpha())
 
 # print(article.islower())
 # print(article.isupper())
@@ -132,7 +132,7 @@ import random
 
 
 
-# article = "Vasya nvirgiokfldll! Vasya jhgrufsjdk! Vasya jguiifjkld!"
+article = "Vasya nvirgiokfldll! Vasya jhgrufsjdk! Vasya jguiifjkld!"
 # article = article.replace("Vasya","Petya")
 # print(article)
 
