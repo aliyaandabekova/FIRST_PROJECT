@@ -94,11 +94,11 @@ file1 = open('list1.txt','a')
 for user in users:
     # print(user)
     name = user['username']
-    rashod = user['total_amount']
+    payment = user['total_amount']
 
     file1.write(name)
     file1.write(' : ')
-    file1.write(str(rashod) + '\n' )
+    file1.write(str(payment) + '\n' )
 
 
 
