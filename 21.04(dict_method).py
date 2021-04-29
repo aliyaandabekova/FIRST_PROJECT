@@ -35,13 +35,13 @@
 
 
 
-# apples = 10
-# print(f'За день я съела {apples} и {20} груш')
+apples = 10
+print(f'За день я съела {apples} и {20} груш')
 
 
 
 # list1 = ['red', 'blue', 'white']
-dict1 = {'name':'aliya'}
+# dict1 = {'name':'aliya'}
 #
 # for i,color in enumerate(list1):
 #     print(i,color)
