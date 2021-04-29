@@ -41,12 +41,12 @@
 
 
 # list1 = ['red', 'blue', 'white']
-# dict1 = {'name':'aliya'}
-
+dict1 = {'name':'aliya'}
+#
 # for i,color in enumerate(list1):
 #     print(i,color)
 
-
+#
 # for key,value in dict1.items():
 #     print(key,value)
 
