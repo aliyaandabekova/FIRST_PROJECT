@@ -31,17 +31,22 @@ def maximum_of_2():
 """
 регистрация
 """
+
 def register(username,password,confirm_password):
     if len(username) >= 8 and password == confirm_password and not password.isalpha():
         print("Успешно!")
-        return username,password
+        return username, password
     # else:
     #     print("Пароли не совпадают!")
+
 try:
-    username,password = register('HarryPotter', '1234', '1234')
+    username,password = register('Harry', 'asdf12' , 'asdf12')
     print('Регистрация завершена!')
 except:
     print("Введите правильные данные!")
+
+
+
 
 
 
@@ -53,10 +58,10 @@ except:
 def autorization():
     for i in range(3):
 
-        saved_usename = input()
+        saved_username = input()
         saved_password = input()
 
-        if saved_usename == username and saved_password == password:
+        if saved_username == username and saved_password == password:
             print("Вы успешно вошли в систему!")
             break
         else:
