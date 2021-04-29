@@ -99,6 +99,17 @@ for user in users:
     file1.write(name)
     file1.write(' : ')
     file1.write(str(payment) + '\n' )
+file1.close()
+
+
+
+def to_file(data):
+    file1 = open('text.txt','w')
+    for user in data:
+        result_str = "{} : {}".format(user['username'],user['total_amount'])
+        file1.write(result_str + '\n')
+    file1.close()
+to_file(users)
 
 
 
