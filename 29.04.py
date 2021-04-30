@@ -46,7 +46,9 @@ comments = [{'id':1,'user_id':1,'post_id':1,'comment':'This is not nic1'},
 """
 1. Нужно найти все posts со статусом sponsored!
 2. Найти комментарии к posts sponsored
-3. Среди найденных комментариев найти те что содержат keyword из posts
+3. Среди найденных комментариев найти те что содержат keyword из posts.
+4. Найти пользователей , которые оставили комментарии с Keyword.
+
 """
 
 
@@ -55,7 +57,7 @@ def sort_post(posts):
     """
 
     :param posts: Список постов
-    :return: Отфильтрованный список постов
+    :return: Отфильтрованный список постов, статус которых sponsored
     """
     for post in posts:
         if post['status'] == 'sponsored':
@@ -86,23 +88,40 @@ posts = comment_to_post(posts,comments)
 
 def finally_list(posts):
     """
-
     :param posts: Список постов
     :return: Список постов с keyword в комментариях
     """
     for post in posts:
         for com in post['comment']:
-            print(post['keyword'])
+            # print(post['keyword'])
             if post['keyword'] not in com:
                 post['comment'].remove(com)
     return posts
 posts = finally_list(posts)
-print(posts)
+# print(posts)
 
+def own_of_comments(comments,posts,users):
+    """
 
-
-
-
+    :param comments: Список комментариев
+    :param posts: Список постов с keyword в комментариях
+    :param users:Список пользователей
+    :return: Имена пользователей , написавших комментрарии с keyword
+    """
+    users1 = []
+    special_comment = []
+    special_user_id = []
+    for post in posts:
+        for i in post['comment']:
+            for comment in comments:
+                if i in comment['comment']:
+                   for user in users:
+                       if comment['user_id'] == user['id']:
+                           if user not in users1:
+                               users1.append(user)
+    return users1
+users1 = own_of_comments(comments,posts,users)
+print((users1))
 
 
 
