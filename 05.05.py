@@ -17,7 +17,7 @@ def send_request(url:str):
     :param url: Ссылка на сайтб откуда будем брать данные
     :return: Данные в виде словарей
     """
-    r = requests.get(url,headers={'Authorization': config('token')})
+    r = requests.get(url,headers={'Authorization':f'Token {config("token")}'})
     return r.json()
 
 
